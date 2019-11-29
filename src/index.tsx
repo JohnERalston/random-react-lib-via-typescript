@@ -1,19 +1,10 @@
 
+/*
+* Inspired by 
+* https://www.pluralsight.com/guides/react-typescript-module-create
+*/
 
-//https://www.pluralsight.com/guides/react-typescript-module-create
+import RedText from './RedText';
+import { IRedTextProps } from './IRedTextProps';
+export { RedText, IRedTextProps };
 
-
-import React, { FC } from "react";
-
-export interface IRedTextProps {
-  text: string;
-}
-
-const RedText: FC<IRedTextProps> = (props: IRedTextProps) => {
-  const red = {
-    color: "red"
-  };
-  return <span style={red}>Hello {props.text}</span>;
-};
-
-export default RedText;
