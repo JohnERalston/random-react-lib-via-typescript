@@ -51,7 +51,7 @@ If you've got an app (create-react-app) referencing this lib via `file: ../rando
 ## Issues
 If you get the Invalid Hook Call error message https://reactjs.org/warnings/invalid-hook-call-warning.html then file:../ won't work.
 
-Instead run `npm pack` on the library tp generate the `.tgz` file. instead of referencing it at it's own location copy it into your app and rference it from there, i.e. 
+Instead run `npm pack` on the library tp generate the `.tgz` file. Instead of referencing it at it's own location copy it into your app and rference it from there, i.e. in packgage.json dependencies
 ```json 
    "random-react-lib-via-typescript": "file:./random-react-lib-via-typescript.tgz"
 ```
