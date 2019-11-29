@@ -48,3 +48,12 @@ const props:IRedTextProps = { text: "World" };
 If you've got an app (create-react-app) referencing this lib via `file: ../random-react-lib-via-typescript` then that app will automatically update when this library builds.
 
 
+## Issues
+If you get the Invalid Hook Call error message https://reactjs.org/warnings/invalid-hook-call-warning.html then file:../ won't work.
+
+Instead run `npm pack` on the library tp generate the `.tgz` file. instead of referencing it at it's own location copy it into your app and rference it from there, i.e. 
+```json 
+   "random-react-lib-via-typescript": "file:./random-react-lib-via-typescript.tgz"
+```
+Note the single . meaning the `.tgz` has been physically dropped into the app
+
